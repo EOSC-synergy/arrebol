@@ -1,0 +1,5 @@
+config:
+  project_repos:
+    myrepo:
+      repo: 'https://github.com/EOSC-synergy/arrebol/'
+EOF
