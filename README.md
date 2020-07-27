@@ -1,4 +1,3 @@
 # arrebol-service
-
-accept/ dir holds the acceptance test tool
+This a prototype to help thinking about batch scheduling designs
 

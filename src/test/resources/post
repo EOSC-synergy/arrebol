@@ -1,0 +1,27 @@
+#/bin/bash
+
+curl -X POST \
+ http://localhost:8080/job \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 3761110d-b8e3-45b7-93cd-cd092e70263c' \
+ -H 'cache-control: no-cache' \
+ -d '{
+ "label": "jid",
+ "tasksSpecs":[
+   {
+       "id": "tid-1",
+       "spec":{
+           "requirements":{
+               "Glue2RAM":"1024"
+           }
+       },
+     "commands":["sleep 10",
+               "sleep 20",
+               "sleep 30"
+       ],
+     "metadata": {
+       "time":"mytime"
+     }
+   }
+   ]
+}' | python -m json.tool
