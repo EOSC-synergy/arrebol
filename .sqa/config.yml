@@ -2,7 +2,8 @@ config:
   project_repos:
     arrebol:
       repo: 'https://github.com/EOSC-synergy/arrebol/'
-      branch: feature/k8s-executor
+      branch: sqa
+      #branch: feature/k8s-executor
       #dockerhub: ufcglsd/arrebol
       #dockertag: k8s
 
