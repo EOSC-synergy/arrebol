@@ -4,4 +4,5 @@ sqa_criteria:
        arrebol:
          container: arrebol-testing
          commands:
+           - ls
            - mvn -f /saps-arrebol-repo/pom.xml spotless:check
