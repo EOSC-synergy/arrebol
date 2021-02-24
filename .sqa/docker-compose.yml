@@ -10,3 +10,13 @@ services:
        source: ./
        target: /saps-arrebol-repo
     command: sleep 3600
+    
+  arrebol-docs:
+    image: "sphinxdoc/sphinx"
+    container_name: arrebol-docs
+    hostname: arrebol-docs
+    volumes:
+     - type: bind
+       source: ./saps-arrebol
+       target: /saps-arrebol-repo
+    command: sleep 3600
