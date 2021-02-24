@@ -6,3 +6,19 @@ sqa_criteria:
          commands:
            - mvn -f /saps-arrebol-repo/pom.xml spotless:apply
            - mvn -f /saps-arrebol-repo/pom.xml spotless:check
+  
+   qc_coverage:
+     repos:
+       arrebol:
+         container: arrebol-testing
+         commands:
+           - mvn -f /saps-arrebol-repo/pom.xml -B -DskipTests clean package
+           - mvn -f /saps-arrebol-repo/pom.xml test
+           
+   qc_doc:
+     repos:
+       arrebol:
+         container: arrebol-docs
+         commands:
+           - pip install recommonmark
+           - make html -C /saps-arrebol-repo/docs/
