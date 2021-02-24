@@ -17,6 +17,6 @@ services:
     hostname: arrebol-docs
     volumes:
      - type: bind
-       source: ./saps-arrebol
+       source: ./
        target: /saps-arrebol-repo
     command: sleep 3600
