@@ -4,7 +4,6 @@ sqa_criteria:
        arrebol:
          container: arrebol-testing
          commands:
-           - mvn -f /saps-arrebol-repo/pom.xml spotless:apply
            - mvn -f /saps-arrebol-repo/pom.xml spotless:check
   
    qc_coverage:
@@ -22,3 +21,10 @@ sqa_criteria:
          commands:
            - pip install recommonmark
            - make html -C /saps-arrebol-repo/docs/
+
+   qc_security:
+     repos:
+       saps-scheduler:
+         container: arrebol-testing
+         commands:
+           - mvn -f /saps-arrebol-repo/pom.xml -B -DskipTests clean package com.github.spotbugs:spotbugs-maven-plugin:check
